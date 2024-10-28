@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/shared/ui/utils";
+import { AppHeader } from "@/widgets/app-header/app-header";
+import { Hero } from "@/pages/home";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -33,6 +35,8 @@ export default function RootLayout({
           geistMono.variable,
         )}
       >
+        <AppHeader variant="auth" />
+        <Hero />
         {children}
       </body>
     </html>
